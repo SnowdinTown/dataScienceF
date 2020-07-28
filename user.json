@@ -1,0 +1,106 @@
+{
+  "snow": {
+    "user_name": "snow",
+    "rank_score": 1000,
+    "type_info": {
+      "\u5b57\u7b26\u4e32": {
+        "offset": 0,
+        "evaluate": 0,
+        "rank": 0
+      },
+      "\u7ebf\u6027\u8868": {
+        "offset": 0,
+        "evaluate": 0,
+        "rank": 0
+      },
+      "\u6570\u7ec4": {
+        "offset": 0,
+        "evaluate": 0,
+        "rank": 0
+      },
+      "\u67e5\u627e\u7b97\u6cd5": {
+        "offset": 0,
+        "evaluate": 0,
+        "rank": 0
+      },
+      "\u6570\u5b57\u64cd\u4f5c": {
+        "offset": 0,
+        "evaluate": 0,
+        "rank": 0
+      },
+      "\u6811\u7ed3\u6784": {
+        "offset": 0,
+        "evaluate": 0,
+        "rank": 0
+      },
+      "\u56fe\u7ed3\u6784": {
+        "offset": 0,
+        "evaluate": 0,
+        "rank": 0
+      }
+    },
+    "records": {
+      "rank": [
+        {
+          "case_id": "2017",
+          "case_type": "\u6570\u7ec4",
+          "record_type": "rank",
+          "start_time": 12039300,
+          "final_score": 50,
+          "final_time": 1205090,
+          "test_times": 5,
+          "rank_change": -10,
+          "pass": true
+        }
+      ],
+      "exercise": []
+    }
+  },
+  "winter": {
+    "user_name": "winter",
+    "rank_score": 100,
+    "type_info": {
+      "\u5b57\u7b26\u4e32": {
+        "offset": 0,
+        "evaluate": 0,
+        "rank": 0
+      },
+      "\u7ebf\u6027\u8868": {
+        "offset": 0,
+        "evaluate": 0,
+        "rank": 0
+      },
+      "\u6570\u7ec4": {
+        "offset": 0,
+        "evaluate": 0,
+        "rank": 0
+      },
+      "\u67e5\u627e\u7b97\u6cd5": {
+        "offset": 0,
+        "evaluate": 0,
+        "rank": 0
+      },
+      "\u6392\u5e8f\u7b97\u6cd5": {
+        "offset": 0,
+        "evaluate": 0,
+        "rank": 0
+      },
+      "\u6570\u5b57\u64cd\u4f5c": {
+        "offset": 0,
+        "evaluate": 0,
+        "rank": 0
+      },
+      "\u6811\u7ed3\u6784": {
+        "offset": 0,
+        "evaluate": 0,
+        "rank": 0
+      },
+      "\u56fe\u7ed3\u6784": {
+        "offset": 0,
+        "evaluate": 0,
+        "rank": 0
+      }
+    },
+    "records": []
+  }
+}
