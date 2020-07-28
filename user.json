@@ -1,106 +1,1062 @@
 {
-  "snow": {
-    "user_name": "snow",
-    "rank_score": 1000,
-    "type_info": {
-      "\u5b57\u7b26\u4e32": {
-        "offset": 0,
-        "evaluate": 0,
-        "rank": 0
-      },
-      "\u7ebf\u6027\u8868": {
-        "offset": 0,
-        "evaluate": 0,
-        "rank": 0
-      },
-      "\u6570\u7ec4": {
-        "offset": 0,
-        "evaluate": 0,
-        "rank": 0
-      },
-      "\u67e5\u627e\u7b97\u6cd5": {
-        "offset": 0,
-        "evaluate": 0,
-        "rank": 0
-      },
-      "\u6570\u5b57\u64cd\u4f5c": {
-        "offset": 0,
-        "evaluate": 0,
-        "rank": 0
-      },
-      "\u6811\u7ed3\u6784": {
-        "offset": 0,
-        "evaluate": 0,
-        "rank": 0
-      },
-      "\u56fe\u7ed3\u6784": {
-        "offset": 0,
-        "evaluate": 0,
-        "rank": 0
-      }
-    },
-    "records": {
-      "rank": [
-        {
-          "case_id": "2017",
-          "case_type": "\u6570\u7ec4",
-          "record_type": "rank",
-          "start_time": 12039300,
-          "final_score": 50,
-          "final_time": 1205090,
-          "test_times": 5,
-          "rank_change": -10,
-          "pass": true
-        }
-      ],
-      "exercise": []
-    }
-  },
   "winter": {
     "user_name": "winter",
-    "rank_score": 100,
+    "rank_score": 875.2024264440057,
     "type_info": {
       "\u5b57\u7b26\u4e32": {
-        "offset": 0,
-        "evaluate": 0,
-        "rank": 0
+        "offset": 1.0,
+        "evaluate": 12.345679012345679,
+        "rank": 170.0802509302364
       },
       "\u7ebf\u6027\u8868": {
-        "offset": 0,
-        "evaluate": 0,
-        "rank": 0
+        "offset": 1.0,
+        "evaluate": 3.3557046979865772,
+        "rank": 104.44791801547983
       },
       "\u6570\u7ec4": {
-        "offset": 0,
-        "evaluate": 0,
-        "rank": 0
+        "offset": 1.0,
+        "evaluate": 8.962264150943396,
+        "rank": 112.27002653691078
       },
       "\u67e5\u627e\u7b97\u6cd5": {
-        "offset": 0,
-        "evaluate": 0,
-        "rank": 0
+        "offset": 1.0,
+        "evaluate": 32.432432432432435,
+        "rank": 326.04620437427957
       },
       "\u6392\u5e8f\u7b97\u6cd5": {
-        "offset": 0,
-        "evaluate": 0,
-        "rank": 0
+        "offset": 1.0,
+        "evaluate": 14.285714285714285,
+        "rank": 200.35299843254631
       },
       "\u6570\u5b57\u64cd\u4f5c": {
-        "offset": 0,
-        "evaluate": 0,
-        "rank": 0
+        "offset": 1.0,
+        "evaluate": 17.575757575757574,
+        "rank": 118.51793985313648
       },
       "\u6811\u7ed3\u6784": {
-        "offset": 0,
-        "evaluate": 0,
-        "rank": 0
+        "offset": 1.0,
+        "evaluate": 1.574803149606299,
+        "rank": 303.487088301416
       },
       "\u56fe\u7ed3\u6784": {
         "offset": 0,
-        "evaluate": 0,
-        "rank": 0
+        "evaluate": 0.0,
+        "rank": 80
       }
     },
-    "records": []
+    "records": [
+      {
+        "case_id": "2534",
+        "case_type": "\u6392\u5e8f\u7b97\u6cd5",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 17.137483083231945,
+        "pass": true
+      },
+      {
+        "case_id": "2538",
+        "case_type": "\u6392\u5e8f\u7b97\u6cd5",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 18.209918025081166,
+        "pass": true
+      },
+      {
+        "case_id": "2897",
+        "case_type": "\u67e5\u627e\u7b97\u6cd5",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 15.630470886798111,
+        "pass": true
+      },
+      {
+        "case_id": "2640",
+        "case_type": "\u67e5\u627e\u7b97\u6cd5",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 16.28159378501412,
+        "pass": true
+      },
+      {
+        "case_id": "2542",
+        "case_type": "\u67e5\u627e\u7b97\u6cd5",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 17.169352663489367,
+        "pass": true
+      },
+      {
+        "case_id": "2753",
+        "case_type": "\u67e5\u627e\u7b97\u6cd5",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 16.432979697388745,
+        "pass": true
+      },
+      {
+        "case_id": "2741",
+        "case_type": "\u67e5\u627e\u7b97\u6cd5",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 16.243943523903464,
+        "pass": true
+      },
+      {
+        "case_id": "2990",
+        "case_type": "\u5b57\u7b26\u4e32",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 12.369930014942558,
+        "pass": true
+      },
+      {
+        "case_id": "2988",
+        "case_type": "\u5b57\u7b26\u4e32",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 11.917352987074256,
+        "pass": true
+      },
+      {
+        "case_id": "2977",
+        "case_type": "\u5b57\u7b26\u4e32",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 11.493506808359847,
+        "pass": true
+      },
+      {
+        "case_id": "2948",
+        "case_type": "\u5b57\u7b26\u4e32",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 11.096498205817415,
+        "pass": true
+      },
+      {
+        "case_id": "2989",
+        "case_type": "\u5b57\u7b26\u4e32",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 10.72449352027103,
+        "pass": true
+      },
+      {
+        "case_id": "2707",
+        "case_type": "\u67e5\u627e\u7b97\u6cd5",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 15.741730895346311,
+        "pass": true
+      },
+      {
+        "case_id": "2748",
+        "case_type": "\u67e5\u627e\u7b97\u6cd5",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 14.546585924458395,
+        "pass": true
+      },
+      {
+        "case_id": "2751",
+        "case_type": "\u67e5\u627e\u7b97\u6cd5",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 15.393323475235297,
+        "pass": true
+      },
+      {
+        "case_id": "2577",
+        "case_type": "\u67e5\u627e\u7b97\u6cd5",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 15.376858394485668,
+        "pass": true
+      },
+      {
+        "case_id": "2606",
+        "case_type": "\u67e5\u627e\u7b97\u6cd5",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 15.235770466703162,
+        "pass": true
+      },
+      {
+        "case_id": "2902",
+        "case_type": "\u6811\u7ed3\u6784",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 10.823332706848928,
+        "pass": true
+      },
+      {
+        "case_id": "2698",
+        "case_type": "\u6811\u7ed3\u6784",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 14.408875592515372,
+        "pass": true
+      },
+      {
+        "case_id": "2758",
+        "case_type": "\u6811\u7ed3\u6784",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 15.34151439352906,
+        "pass": true
+      },
+      {
+        "case_id": "2736",
+        "case_type": "\u6811\u7ed3\u6784",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 14.870137054043255,
+        "pass": true
+      },
+      {
+        "case_id": "2735",
+        "case_type": "\u6811\u7ed3\u6784",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 14.875500004685273,
+        "pass": true
+      },
+      {
+        "case_id": "2884",
+        "case_type": "\u6570\u7ec4",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 6.68844740798071,
+        "pass": true
+      },
+      {
+        "case_id": "2930",
+        "case_type": "\u6570\u7ec4",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 6.565692871352855,
+        "pass": true
+      },
+      {
+        "case_id": "2913",
+        "case_type": "\u6570\u7ec4",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 6.448644772306309,
+        "pass": true
+      },
+      {
+        "case_id": "2739",
+        "case_type": "\u6570\u7ec4",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 6.336951945156147,
+        "pass": true
+      },
+      {
+        "case_id": "2889",
+        "case_type": "\u6570\u7ec4",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 6.230289540114767,
+        "pass": true
+      },
+      {
+        "case_id": "2601",
+        "case_type": "\u67e5\u627e\u7b97\u6cd5",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 11.627392599157892,
+        "pass": true
+      },
+      {
+        "case_id": "2541",
+        "case_type": "\u67e5\u627e\u7b97\u6cd5",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 10.585479312069358,
+        "pass": true
+      },
+      {
+        "case_id": "2604",
+        "case_type": "\u67e5\u627e\u7b97\u6cd5",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 10.86327204965897,
+        "pass": true
+      },
+      {
+        "case_id": "2746",
+        "case_type": "\u67e5\u627e\u7b97\u6cd5",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 10.505868133264807,
+        "pass": true
+      },
+      {
+        "case_id": "2773",
+        "case_type": "\u67e5\u627e\u7b97\u6cd5",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 9.590983103052386,
+        "pass": true
+      },
+      {
+        "case_id": "2967",
+        "case_type": "\u5b57\u7b26\u4e32",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 6.375727040376743,
+        "pass": true
+      },
+      {
+        "case_id": "2973",
+        "case_type": "\u5b57\u7b26\u4e32",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 6.473944824660849,
+        "pass": true
+      },
+      {
+        "case_id": "2976",
+        "case_type": "\u5b57\u7b26\u4e32",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 6.991058260578674,
+        "pass": true
+      },
+      {
+        "case_id": "2740",
+        "case_type": "\u5b57\u7b26\u4e32",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 7.031242395392303,
+        "pass": true
+      },
+      {
+        "case_id": "2980",
+        "case_type": "\u5b57\u7b26\u4e32",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 5.606496872762693,
+        "pass": true
+      },
+      {
+        "case_id": "2905",
+        "case_type": "\u7ebf\u6027\u8868",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 4.991512552030888,
+        "pass": true
+      },
+      {
+        "case_id": "2670",
+        "case_type": "\u7ebf\u6027\u8868",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 4.938749217719697,
+        "pass": true
+      },
+      {
+        "case_id": "2594",
+        "case_type": "\u7ebf\u6027\u8868",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 4.887826841580985,
+        "pass": true
+      },
+      {
+        "case_id": "2663",
+        "case_type": "\u7ebf\u6027\u8868",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 4.838660231494573,
+        "pass": true
+      },
+      {
+        "case_id": "2672",
+        "case_type": "\u7ebf\u6027\u8868",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 4.791169172653678,
+        "pass": true
+      },
+      {
+        "case_id": "2776",
+        "case_type": "\u6811\u7ed3\u6784",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 9.937217366959416,
+        "pass": true
+      },
+      {
+        "case_id": "2782",
+        "case_type": "\u6811\u7ed3\u6784",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 10.093858141086509,
+        "pass": true
+      },
+      {
+        "case_id": "2693",
+        "case_type": "\u6811\u7ed3\u6784",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 10.343316488334622,
+        "pass": true
+      },
+      {
+        "case_id": "2757",
+        "case_type": "\u6811\u7ed3\u6784",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 10.018149460080124,
+        "pass": true
+      },
+      {
+        "case_id": "2297",
+        "case_type": "\u6811\u7ed3\u6784",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 9.833615065867287,
+        "pass": true
+      },
+      {
+        "case_id": "2452",
+        "case_type": "\u6570\u5b57\u64cd\u4f5c",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 4.32644645803646,
+        "pass": true
+      },
+      {
+        "case_id": "2418",
+        "case_type": "\u6570\u5b57\u64cd\u4f5c",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 4.295227905030135,
+        "pass": true
+      },
+      {
+        "case_id": "2584",
+        "case_type": "\u6570\u5b57\u64cd\u4f5c",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 4.264929403950644,
+        "pass": true
+      },
+      {
+        "case_id": "2622",
+        "case_type": "\u6570\u5b57\u64cd\u4f5c",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 4.235515754362891,
+        "pass": true
+      },
+      {
+        "case_id": "2895",
+        "case_type": "\u6570\u5b57\u64cd\u4f5c",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 4.206953465092962,
+        "pass": true
+      },
+      {
+        "case_id": "2453",
+        "case_type": "\u67e5\u627e\u7b97\u6cd5",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 7.47989627157807,
+        "pass": true
+      },
+      {
+        "case_id": "2571",
+        "case_type": "\u67e5\u627e\u7b97\u6cd5",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 6.588979405769563,
+        "pass": true
+      },
+      {
+        "case_id": "2463",
+        "case_type": "\u67e5\u627e\u7b97\u6cd5",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 7.179944416835861,
+        "pass": true
+      },
+      {
+        "case_id": "2769",
+        "case_type": "\u67e5\u627e\u7b97\u6cd5",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 7.033458415701487,
+        "pass": true
+      },
+      {
+        "case_id": "2461",
+        "case_type": "\u67e5\u627e\u7b97\u6cd5",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 6.538320954368552,
+        "pass": true
+      },
+      {
+        "case_id": "2719",
+        "case_type": "\u6811\u7ed3\u6784",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 8.03660288518815,
+        "pass": true
+      },
+      {
+        "case_id": "2744",
+        "case_type": "\u6811\u7ed3\u6784",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 8.011643887369003,
+        "pass": true
+      },
+      {
+        "case_id": "2652",
+        "case_type": "\u6811\u7ed3\u6784",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 7.822069242615779,
+        "pass": true
+      },
+      {
+        "case_id": "2369",
+        "case_type": "\u6811\u7ed3\u6784",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 7.826215820713265,
+        "pass": true
+      },
+      {
+        "case_id": "2708",
+        "case_type": "\u6811\u7ed3\u6784",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 7.783793711162003,
+        "pass": true
+      },
+      {
+        "case_id": "2529",
+        "case_type": "\u6392\u5e8f\u7b97\u6cd5",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 4.089407118102036,
+        "pass": true
+      },
+      {
+        "case_id": "2535",
+        "case_type": "\u6392\u5e8f\u7b97\u6cd5",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 4.035789232180731,
+        "pass": true
+      },
+      {
+        "case_id": "2526",
+        "case_type": "\u6392\u5e8f\u7b97\u6cd5",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 4.8425271409599855,
+        "pass": true
+      },
+      {
+        "case_id": "2396",
+        "case_type": "\u6392\u5e8f\u7b97\u6cd5",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 5.880666089702419,
+        "pass": true
+      },
+      {
+        "case_id": "2440",
+        "case_type": "\u6392\u5e8f\u7b97\u6cd5",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 5.973710344689015,
+        "pass": true
+      },
+      {
+        "case_id": "2441",
+        "case_type": "\u6392\u5e8f\u7b97\u6cd5",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 6.280272919549171,
+        "pass": true
+      },
+      {
+        "case_id": "2490",
+        "case_type": "\u6392\u5e8f\u7b97\u6cd5",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 6.176132904479551,
+        "pass": true
+      },
+      {
+        "case_id": "2504",
+        "case_type": "\u6392\u5e8f\u7b97\u6cd5",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 6.076573387269798,
+        "pass": true
+      },
+      {
+        "case_id": "2443",
+        "case_type": "\u6392\u5e8f\u7b97\u6cd5",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 6.091281329690219,
+        "pass": true
+      },
+      {
+        "case_id": "2448",
+        "case_type": "\u6392\u5e8f\u7b97\u6cd5",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 6.2363976554224765,
+        "pass": true
+      },
+      {
+        "case_id": "2713",
+        "case_type": "\u6811\u7ed3\u6784",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 6.958987901631769,
+        "pass": true
+      },
+      {
+        "case_id": "2493",
+        "case_type": "\u6811\u7ed3\u6784",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 6.940055441563715,
+        "pass": true
+      },
+      {
+        "case_id": "2447",
+        "case_type": "\u6811\u7ed3\u6784",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 6.805324748034277,
+        "pass": true
+      },
+      {
+        "case_id": "2502",
+        "case_type": "\u6811\u7ed3\u6784",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 6.67705310894441,
+        "pass": true
+      },
+      {
+        "case_id": "2501",
+        "case_type": "\u6811\u7ed3\u6784",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 6.554832083976764,
+        "pass": true
+      },
+      {
+        "case_id": "2488",
+        "case_type": "\u6392\u5e8f\u7b97\u6cd5",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 5.626713052118727,
+        "pass": true
+      },
+      {
+        "case_id": "2422",
+        "case_type": "\u6392\u5e8f\u7b97\u6cd5",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 5.7589437288743,
+        "pass": true
+      },
+      {
+        "case_id": "2520",
+        "case_type": "\u6392\u5e8f\u7b97\u6cd5",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 5.850276256057818,
+        "pass": true
+      },
+      {
+        "case_id": "2496",
+        "case_type": "\u6392\u5e8f\u7b97\u6cd5",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 6.035864290105542,
+        "pass": true
+      },
+      {
+        "case_id": "2491",
+        "case_type": "\u6392\u5e8f\u7b97\u6cd5",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 6.051041875031449,
+        "pass": true
+      },
+      {
+        "case_id": "2626",
+        "case_type": "\u6570\u5b57\u64cd\u4f5c",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 3.3981958821114464,
+        "pass": true
+      },
+      {
+        "case_id": "2335",
+        "case_type": "\u6570\u5b57\u64cd\u4f5c",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 3.6647717658084034,
+        "pass": true
+      },
+      {
+        "case_id": "2586",
+        "case_type": "\u6570\u5b57\u64cd\u4f5c",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 3.382533149346582,
+        "pass": true
+      },
+      {
+        "case_id": "2361",
+        "case_type": "\u6570\u5b57\u64cd\u4f5c",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 3.3752489976260023,
+        "pass": true
+      },
+      {
+        "case_id": "2417",
+        "case_type": "\u6570\u5b57\u64cd\u4f5c",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 3.368117071770953,
+        "pass": true
+      },
+      {
+        "case_id": "2555",
+        "case_type": "\u6811\u7ed3\u6784",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 5.703426411524638,
+        "pass": true
+      },
+      {
+        "case_id": "2660",
+        "case_type": "\u6811\u7ed3\u6784",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 6.067753318136465,
+        "pass": true
+      },
+      {
+        "case_id": "2781",
+        "case_type": "\u6811\u7ed3\u6784",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 5.972885292210984,
+        "pass": true
+      },
+      {
+        "case_id": "2712",
+        "case_type": "\u6811\u7ed3\u6784",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 5.882059591588382,
+        "pass": true
+      },
+      {
+        "case_id": "2551",
+        "case_type": "\u6811\u7ed3\u6784",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 1,
+        "test_times": 2,
+        "rank_change": 5.898868582806616,
+        "pass": true
+      }
+    ]
   }
 }
