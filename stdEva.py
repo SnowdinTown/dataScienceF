@@ -53,6 +53,7 @@ def getAbilityFigure(userEva):
 	ax.grid(True)
 	plt.show()
 	
+	
 if __name__ == '__main__':
 	f = open('user.json', encoding='utf-8')
 	data =  json.loads(f.read())['snow']['type_evaluates']
