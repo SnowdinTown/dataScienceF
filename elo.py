@@ -6,7 +6,7 @@ USER_FILE = 'user.json'
 CASE_FILE = 'total_cases.json'
 CASE_TYPES = ['字符串', '线性表', '数组', '查找算法', '排序算法', '数字操作', '树结构', '图结构']
 WEIGHT = [1.0, 0.9, 0.8, 0.7, 0.6, 0.5]
-WEIGHT2 = [1.0, 0.6, 0]
+WEIGHT2 = [1.0, 0.7, 0.5, 0.3, 0]
 EXTEND_NUM = 0.1
 HIDE_NUM = 0.1   # 隐藏分系数
 
@@ -21,10 +21,12 @@ def getCaseData():
     return json.loads(f.read())
 
 
-def record_model(case_id, case_type, record_type, start, score, final, times, change, is_pass):
+def record_model(case_id, case_type, case_rank, user_rank, record_type, start, score, final, times, change, is_pass):
     return {
         "case_id": case_id,
         "case_type": case_type,
+        "case_rank": case_rank,
+        "user_rank": user_rank,
         "record_type": record_type,
         "start_time": start,
         "final_score": score,
@@ -54,7 +56,7 @@ def process_rank(user, case_type, case_id, score, start, end, times):
     if user['rank_score'] < 0:
         user['rank_score'] = 0
     
-    record = record_model(case_id, case_type, 'rank', start, score, end, times, rank_change_adjust, is_pass)
+    record = record_model(case_id, case_type, case['rank_score'], type_info['rank'], 'rank', start, score, end, times, rank_change_adjust, is_pass)
     updateUser(user, record)
 
 
@@ -72,7 +74,7 @@ def process_exercise(user, case_type, case_id, score, start, end, times):
     if type_info['hide_score'] > 30:
         type_info['hide_score'] = 30
 
-    record = record_model(case_id, case_type, 'exercise', start, score, end, times, 0, is_pass)
+    record = record_model(case_id, case_type, case['rank_score'], type_info['rank'], 'exercise', start, score, end, times, 0, is_pass)
     updateUser(user, record)
 
 
@@ -94,10 +96,14 @@ def computeS(score, start, end):
     idx1 = int(time / (1000 * 60 * 60))
     if score == 100:
         idx2 = 0
-    elif score >= 60:
+    elif score >= 80:
         idx2 = 1
-    else:
+    elif score >= 60:
         idx2 = 2
+    elif score >= 40:
+        idx2 = 3
+    else:
+        idx2 = 4
     return WEIGHT2[idx2] * WEIGHT[idx1]
 
 

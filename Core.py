@@ -339,4 +339,8 @@ def draw_rank_distribution():
 
 
 if __name__ == '__main__':
-    pass
+    data = getData('user.json')
+    snow = data['snowo']
+    records = snow['records']
+    pos = list( filter(lambda x: x['case_type'] == '图结构', records))
+    print(len(pos))
