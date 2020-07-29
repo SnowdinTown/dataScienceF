@@ -1058,5 +1058,97 @@
         "pass": true
       }
     ]
+  },
+  "snow": {
+    "user_name": "snow",
+    "rank_score": 117.7217093468686,
+    "type_info": {
+      "\u5b57\u7b26\u4e32": {
+        "offset": 0,
+        "hide_score": 0,
+        "rank": 50
+      },
+      "\u7ebf\u6027\u8868": {
+        "offset": 0,
+        "hide_score": 0,
+        "rank": 50
+      },
+      "\u6570\u7ec4": {
+        "offset": 1.0,
+        "hide_score": 0,
+        "rank": 69.95686365268264
+      },
+      "\u67e5\u627e\u7b97\u6cd5": {
+        "offset": 0,
+        "hide_score": 0,
+        "rank": 50
+      },
+      "\u6392\u5e8f\u7b97\u6cd5": {
+        "offset": 0,
+        "hide_score": 0,
+        "rank": 50
+      },
+      "\u6570\u5b57\u64cd\u4f5c": {
+        "offset": 0,
+        "hide_score": 0,
+        "rank": 50
+      },
+      "\u6811\u7ed3\u6784": {
+        "offset": 1.0,
+        "hide_score": 2.443217594733084,
+        "rank": 70.66136582472777
+      },
+      "\u56fe\u7ed3\u6784": {
+        "offset": 0,
+        "hide_score": 0,
+        "rank": 50
+      }
+    },
+    "records": [
+      {
+        "case_id": "2891",
+        "case_type": "\u6570\u7ec4",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 300000,
+        "test_times": 4,
+        "rank_change": 0.8568741541615973,
+        "pass": true
+      },
+      {
+        "case_id": "2884",
+        "case_type": "\u6570\u7ec4",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 300000,
+        "test_times": 4,
+        "rank_change": 6.840246588857596,
+        "pass": true
+      },
+      {
+        "case_id": "2902",
+        "case_type": "\u6811\u7ed3\u6784",
+        "record_type": "rank",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 3599999,
+        "test_times": 3,
+        "rank_change": 10.024588603849399,
+        "pass": true
+      },
+      {
+        "case_id": "2698",
+        "case_type": "\u6811\u7ed3\u6784",
+        "record_type": "exercise",
+        "start_time": 0,
+        "final_score": 100,
+        "final_time": 3599999,
+        "test_times": 3,
+        "rank_change": 0,
+        "pass": true
+      }
+    ]
   }
 }

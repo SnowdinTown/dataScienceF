@@ -1,11 +1,15 @@
 import numpy as np
 from matplotlib import pyplot as plt
 import json
+import codeLearn
 
 
 def getPos(type, rank):
-	return rank
-	pass
+	case_info = codeLearn.getCaseData()[type]
+	for i in range(len(case_info)):
+		if case_info[i]['rank_score'] > rank:
+			return int(i / len(case_info) * 100)
+	return 100
 
 
 def getAbilityFigure(userEva):
