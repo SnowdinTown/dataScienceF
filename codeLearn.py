@@ -10,6 +10,7 @@ USER_FILE = 'user.json'
 CASE_FILE = 'total_cases.json'
 INIT_SCORE = 100
 RANK_SCOPE = 50
+MAX_SCOPE = 200
 CASE_TYPES = ['字符串', '线性表', '数组', '查找算法', '排序算法', '数字操作', '树结构', '图结构']
 GROUP_MAX_SCORE = 2000
 GROUP_MAX_NUM = 5
@@ -99,10 +100,12 @@ def getRecommendCase(type, offset):
                     backup_cases[0] = (i, diff)
         backup_cases.sort(key=lambda x: x[1])
 
-    while sum(map(lambda x: x['rank_score'], res_cases)) < GROUP_MAX_SCORE and len(res_cases) < GROUP_MAX_NUM and len(
-            backup_cases) > 0:
-        res_cases.append(enabled_cases[backup_cases[0][0]])
-        del backup_cases[0]
+    while sum(map(lambda x: x['rank_score'], res_cases)) < GROUP_MAX_SCORE and len(res_cases) < GROUP_MAX_NUM and len(backup_cases) > 0:
+        if backup_cases[0][1] < MAX_SCOPE:
+            res_cases.append(enabled_cases[backup_cases[0][0]])
+            del backup_cases[0]
+        else:
+            break
 
     return res_cases
 
@@ -129,11 +132,11 @@ def test():
         print('---------------------------------------------------------------------------------------------')
 
         print('请输入每题得分，开始时间，结束时间，修改次数')
-
+        
         # 测试用
         testDrive.testSingle(cases[0])
         sys.stdin = open('rankTest', 'r')
-
+        
         for i in range(1):
             ls = list(map(lambda x: int(x), input().split()))
             score = ls[0]
@@ -223,9 +226,9 @@ if __name__ == '__main__':
 	# 		DATA_USERS = {}
 	# 		updateUserData()
 	# print(test_data)
-
+    
     DATA_CASES = getCaseData()
     DATA_USERS = getUserData()
     USER_NAME = login()
-    for i in range(700):
+    for i in range(600):
         test()

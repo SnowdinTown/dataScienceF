@@ -58,16 +58,16 @@ def testUserRankFigure(user):
 	records = user['records']
 	score = 100
 	scores = [100]
-	for i in range(600):
+	for i in range(len(records)):
 		score += records[i]['rank_change']
 		scores.append(score)
 	
 	y = scores
-	x = range(601)
+	x = range(len(records)+1)
 	plt.plot(x,y)
 	plt.show()
 	
 if __name__ == '__main__':
 	f = open('user.json', encoding='utf-8')
-	data =  json.loads(f.read())['summer']
+	data =  json.loads(f.read())['snow']
 	testUserRankFigure(data)

@@ -1,15 +1,19 @@
 import random
 
 PASS = '100 0 300000 4\n'
-FAIL = '50 0 7200000 6\n'
+HALF_PASS = '80 0 3600000 2\n'
+FAIL1 = '60 0 3600000 3\n'
+FAIL2 = '50 0 3600000 6\n'
+FAIL3 = '20 0 1 2\n'
+
 ABILITY = {
-	'字符串': 200,
-	'线性表': 144,
-	'数组': 100,
-	'查找算法': 370,
-	'排序算法': 119,
-	'数字操作': 200,
-	'树结构': 301,
+	'字符串': 400,
+	'线性表': 400,
+	'数组': 400,
+	'查找算法': 400,
+	'排序算法': 400,
+	'数字操作': 400,
+	'树结构': 400,
 	'图结构': 400,
 
 }
@@ -32,20 +36,40 @@ def testRank(num):
 
 
 def getRate(type, score):
-	if score <= ABILITY[type]*0.5:
-		return  PASS
-	elif score <= ABILITY[type]*1.1:
-		if random.random() < 0.6:
-			return PASS
+	if score <= ABILITY[type]:
+		num = random.random()
+		if num < 0.1:
+			return HALF_PASS
 		else:
-			return FAIL
-	elif score <= ABILITY[type]*1.5:
-		if random.random() < 0.2:
 			return PASS
+	elif score <= ABILITY[type] + 200:
+		num = random.random()
+		if num < 0.3:
+			return PASS
+		elif num < 0.6:
+			return HALF_PASS
+		elif num < 0.8:
+			return FAIL1
 		else:
-			return FAIL
+			return FAIL2
+	elif score <= ABILITY[type] + 400:
+		num = random.random()
+		if num < 0.1:
+			return PASS
+		elif num < 0.3:
+			return HALF_PASS
+		elif num < 0.7:
+			return FAIL1
+		else:
+			return FAIL2
 	else:
-		return FAIL
+		num = random.random()
+		if num < 0.1:
+			return FAIL1
+		elif num < 0.4:
+			return FAIL2
+		else:
+			return FAIL3
 
 
 
