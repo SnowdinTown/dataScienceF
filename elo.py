@@ -6,7 +6,7 @@ USER_FILE = 'user.json'
 CASE_FILE = 'total_cases.json'
 CASE_TYPES = ['字符串', '线性表', '数组', '查找算法', '排序算法', '数字操作', '树结构', '图结构']
 WEIGHT = [1.1, 1.0, 0.9, 0.8, 0.7, 0.6]
-EXTEND_NUM = 0.4
+EXTEND_NUM = 0.1
 HIDE_NUM = 0.1   # 隐藏分系数
 
 
@@ -48,7 +48,7 @@ def process_rank(user, case_type, case_id, score, start, end, times):
     type_info['rank'] += rank_change
     if type_info['rank'] < 0:
         type_info['rank'] = 0
-    rank_change_adjust = rank_change* (case['difficulty'] + EXTEND_NUM)   # 考虑难度分布，使难度分布中心趋近0.5
+    rank_change_adjust = rank_change * (case['difficulty'] + EXTEND_NUM) * 0.5 # 考虑难度分布，使难度分布中心趋近0.5
     user['rank_score'] += rank_change_adjust
     if user['rank_score'] < 0:
         user['rank_score'] = 0
@@ -80,7 +80,7 @@ def process_method(user, case, score, start, end):
     type_pass_rate = user['type_info'][case['case_type']]['offset']
     if type_pass_rate == 0:
         type_pass_rate = 1
-    return getrankChange(user['rank_score'], case['rank_score'], computeS(score, start, end), computeK(type_pass_rate))
+    return getrankChange(user['type_info'][case['case_type']]['rank'], case['rank_score'], computeS(score, start, end), computeK(type_pass_rate))
 
 
 def getrankChange(user_rank, case_rank, S, K):
@@ -97,9 +97,9 @@ def computeS(score, start, end):
 def computeK(value):
     percent = value
     if percent >= 0.75:
-        return 40
+        return 60
     elif percent >= 0.50:
-        return 25
+        return 35
     else:
         return 15
 
