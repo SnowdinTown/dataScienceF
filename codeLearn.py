@@ -37,15 +37,18 @@ def updateUserData():
 def addAccount(name):
     evaluate = {}
     for i in CASE_TYPES:
-        evaluate[i] = ({'offset': 0, 'evaluate': 0, 'rank': 50})
+        evaluate[i] = ({'offset': 0, 'hide_score': 0, 'rank': 50})
     DATA_USERS[name] = {'user_name': name, 'rank_score': INIT_SCORE, 'type_info': evaluate, 'records': []}
     updateUserData()
 
 
 def register():
     name = input("输入一个新名字: ")
-    while name in DATA_USERS.keys():
-        name = input("这个名字已经被占用，请输入一个新名字: ")
+    while name in DATA_USERS.keys() or name == '':
+        if name == '':
+            name = input("名字不能为空，请重新输入：")
+        else:
+            name = input("这个名字已经被占用，请输入一个新名字: ")
     addAccount(name)
     return name
 
@@ -110,26 +113,27 @@ def getOffset(type):
 def test():
     print("测试题目难度会根据你的分数确定，并会采取计时来综合评估你的成绩，请注意做题时间")
     input("已准备好按Enter键即可开始")
-    random_type = int(random.random() * len(CASE_TYPES))
-    cases = getRecommendCase(random_type, getOffset(random_type))
+    type_info = DATA_USERS[USER_NAME]['type_info']
+    sorted_types = list(
+        map(lambda x: CASE_TYPES.index(x), sorted(type_info.keys(), key=lambda x: type_info[x]['rank'])))
+    random_type = int(random.random() * (len(CASE_TYPES)*1.5))%len(CASE_TYPES)   # 增加薄弱题被选到的概率
+    cases = getRecommendCase(sorted_types[random_type], getOffset(random_type))
     if len(cases) > 0:
-        print("系统为您推荐以下练习题目：")
-        for i in range(len(cases)):
-            print(" 题目" + str(i + 1) + "：")
-            print("     种类：" + cases[i]['case_type'])
-            print("     下载地址：" + cases[i]['case_zip'])
-            print("     题目难度：{}".format(cases[i]['rank_score']))
+        print("测试题目：")
+        print("     种类：" + cases[0]['case_type'])
+        print("     下载地址：" + cases[0]['case_zip'])
+        print("     题目难度：{}".format(cases[0]['rank_score']))
         print('---------------------------------------------------------------------------------------------')
 
         print('请输入每题得分，开始时间，结束时间，修改次数')
-        for i in range(len(cases)):
+        for i in range(1):
             ls = list(map(lambda x: int(x), input().split()))
             score = ls[0]
             start_time = ls[1]
             end_time = ls[2]
             times = ls[3]
-            elo.process_method(DATA_USERS[USER_NAME], cases[i]['case_type'], cases[i]['case_id'], score, start_time,
-                               end_time, times, 'rank')
+            elo.process_rank(DATA_USERS[USER_NAME], cases[i]['case_type'], cases[i]['case_id'], score, start_time,
+                               end_time, times)
     else:
         print("已经没有可做的题了！")
 
@@ -137,7 +141,7 @@ def test():
 def exercise():
     print("练习题目不会计时，将会根据你的意愿以及做题记录确定题目种类，并会根据你的分数确定难度")
     print("请选择你的做题倾向：")
-    print("可选种类：1.字符串, 2.线性表, 3.数组, 4.查找算法，6.排序算法 5.数字操作, 7.树结构, 8图结构.")
+    print("可选种类：1.字符串, 2.线性表, 3.数组, 4.查找算法，5.排序算法 6.数字操作, 7.树结构, 8图结构.")
     type = int(input("请输入对应编号（1-8）：")) - 1
 
     type_info = DATA_USERS[USER_NAME]['type_info']
@@ -165,8 +169,8 @@ def exercise():
             start_time = ls[1]
             end_time = ls[2]
             times = ls[3]
-            elo.process_method(DATA_USERS[USER_NAME], cases[i]['case_type'], cases[i]['case_id'], score, start_time,
-                               end_time, times, 'exercise')
+            elo.process_exercise(DATA_USERS[USER_NAME], cases[i]['case_type'], cases[i]['case_id'], score, start_time,
+                               end_time, times)
     else:
         print("已经没有可做的题了！")
 
@@ -174,7 +178,7 @@ def exercise():
 def getEvaluate():
     print(" 用户名：" + USER_NAME)
     print(" 编程分数：" + str(DATA_USERS[USER_NAME]['rank_score']))
-    #stdEva.getAbilityFigure(DATA_USERS[USER_NAME]['type_info'])
+    stdEva.getAbilityFigure(DATA_USERS[USER_NAME]['type_info'])
 
 
 def start():
