@@ -311,67 +311,6 @@ def draw_rank_zone():
             y.append(0)
 
 
-def rank_method(user, case_rank, score, time):
-    user_rank = user['rank_score']
-    user['rank_num'] += 1
-    weight_list = [1.1, 1.0, 0.9, 0.8, 0.7, 0.6]
-    idx = int(time / (1000 * 60 * 60))
-    s = score / 100 * weight_list[idx]
-    if s >= 0.8:
-        user['pass_num'] += 1
-    K = compute_k(user['rank_num'], user['pass_num'])
-    E1 = 1 / (1 + pow(10, (case_rank - user_rank) / 400))
-    new_user_rank = user_rank + K * (s - E1)
-    if new_user_rank < 0:
-        new_user_rank = 0
-    print('{} {} {}'.format(user_rank, E1, new_user_rank))
-
-
-def compute_k(rank_num, pass_num):
-    percent = pass_num / rank_num
-    if percent >= 0.75:
-        return 30
-    elif percent >= 0.50:
-        return 20
-    elif percent >= 0.25:
-        return 10
-    else:
-        return 5
-
-
-def user():
-    return {
-        "snow": {
-            "user_name": "snow",
-            "rank_score": 360,
-            "rank_num": 0,
-            "pass_num": 0,
-            "type_evaluates": {
-                "\u5b57\u7b26\u4e32": 80,
-                "\u7ebf\u6027\u8868": 80,
-                "\u6570\u7ec4": 80,
-                "\u67e5\u627e\u7b97\u6cd5": 80,
-                "\u6570\u5b57\u64cd\u4f5c": 80,
-                "\u6811\u7ed3\u6784": 80,
-                "\u56fe\u7ed3\u6784": 80
-            },
-            "records": [
-                {
-                    "case_id": "2017",
-                    "case_type": "\u6570\u7ec4",
-                    "record_type": "rank",
-                    "start_time": 12039300,
-                    "final_score": 50,
-                    "final_time": 1205090,
-                    "test_times": 5,
-                    "rank_change": -10,
-                    "evaluate": 40
-                }
-            ]
-        }
-    }
-
-
 def draw_rank_distribution():
     data = getData('case_average&difficulty.json')
     data.sort(key=lambda x: x['difficulty'])

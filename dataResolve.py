@@ -43,8 +43,7 @@ def getGroup():
 			if i != j and case_groups[i].issubset(case_groups[j]):
 				repeat.add(i)
 				break
-	
-	
+
 	for i in range(len(case_groups)):
 		if i not in repeat and len(case_groups[i]) != 204:
 			print(len(case_groups[i]))
@@ -85,7 +84,7 @@ def getRank(difficulty):
 		return rank
 
 
-def filteCaseInfo():
+def filterCaseInfo():
 	case_dir = {}
 	for type in CASE_TYPES:
 		case_dir[type] = []
@@ -111,4 +110,4 @@ if __name__ == '__main__':
 	RAW_DATA = getRawData()
 	getGroup()
 	getCases()
-	filteCaseInfo()
+	filterCaseInfo()

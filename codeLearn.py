@@ -119,7 +119,7 @@ def test():
     type_info = DATA_USERS[USER_NAME]['type_info']
     sorted_types = list(
         map(lambda x: CASE_TYPES.index(x), sorted(type_info.keys(), key=lambda x: type_info[x]['rank'])))
-    random_type = int(random.random() * (len(CASE_TYPES)*1.5))%len(CASE_TYPES)   # 增加薄弱题被选到的概率
+    random_type = int(random.random() * (len(CASE_TYPES) * 1.5)) % len(CASE_TYPES)  # 增加薄弱题被选到的概率
     cases = getRecommendCase(sorted_types[random_type], getOffset(random_type))
     if len(cases) > 0:
         # print("测试题目：")
@@ -136,10 +136,10 @@ def test():
             end_time = ls[2]
             times = ls[3]
             elo.process_rank(DATA_USERS[USER_NAME], cases[i]['case_type'], cases[i]['case_id'], score, start_time,
-                               end_time, times)
+                             end_time, times)
     else:
-	    pass
-        # print("已经没有可做的题了！")
+        pass
+    # print("已经没有可做的题了！")
 
 
 def exercise():
@@ -174,7 +174,7 @@ def exercise():
             end_time = ls[2]
             times = ls[3]
             elo.process_exercise(DATA_USERS[USER_NAME], cases[i]['case_type'], cases[i]['case_id'], score, start_time,
-                               end_time, times)
+                                 end_time, times)
     else:
         print("已经没有可做的题了！")
 
@@ -204,20 +204,26 @@ def start():
         flag = input()
 
 
-
-
 if __name__ == '__main__':
-	DATA_CASES = getCaseData()
-	test_data = []
-	for i in range(1,9):
-		test_data.append([])
-		for j in range(10):
-			testDrive.testRank(i*100)
-			DATA_USERS = {}
-			sys.stdin = open('rankTest', 'r')
-			USER_NAME = login()
-			start()
-			test_data[i-1].append(DATA_USERS[USER_NAME]['rank_score'])
-			DATA_USERS = {}
-			updateUserData()
-	print(test_data)
+    DATA_CASES = getCaseData()
+    test_data = []
+    for i in range(1, 9):
+    #     test_data.append([])
+    #     for j in range(10):
+        test_data = []
+        testDrive.testRank(i * 100)
+        DATA_USERS = {}
+        updateUserData()
+        sys.stdin = open('rankTest', 'r')
+        USER_NAME = login()
+        start()
+        test_data.append(DATA_USERS[USER_NAME]['rank_score'])
+        test_data.append(DATA_USERS[USER_NAME]['type_info'])
+        print()
+        print(test_data[0])
+        # for i in test_data[1].keys():
+        #     print(i)
+        #     print(test_data[1][i])
+    #        DATA_USERS = {}
+    #        updateUserData()
+

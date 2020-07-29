@@ -11,7 +11,7 @@ def testRank(num):
 			# 	print("50 0 7200000 6")
 			# else:
 			# 	print("100 0 300000 4")
-			f.write("100 0 300000 4\n")
+			f.write("80 0 3600000 4\n")
 		# f.write("D\n")
 		f.write("Q\n")
 
