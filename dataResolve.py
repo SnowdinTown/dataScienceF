@@ -101,7 +101,9 @@ def filterCaseInfo():
 	
 	for cases in case_dir.values():
 		cases.sort(key=lambda x:x['rank_score'])
-		
+		# 测试用
+		print("'"+cases[0]['case_type']+"':"+str(cases[int(len(cases)/2)]['rank_score'])+",")
+	
 	with open(RES_CASE_FILE,'w') as f:
 		json.dump(case_dir, f)
 		

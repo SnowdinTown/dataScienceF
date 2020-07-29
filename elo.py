@@ -49,7 +49,7 @@ def process_rank(user, case_type, case_id, score, start, end, times):
     type_info['rank'] += rank_change
     if type_info['rank'] < 0:
         type_info['rank'] = 0
-    rank_change_adjust = rank_change * (case['difficulty'] + EXTEND_NUM) * 0.5 # 考虑难度分布，使难度分布中心趋近0.5
+    rank_change_adjust = rank_change * (case['difficulty'] + EXTEND_NUM) * 0.5   # 考虑难度分布，使难度分布中心趋近0.5
     user['rank_score'] += rank_change_adjust
     if user['rank_score'] < 0:
         user['rank_score'] = 0
@@ -66,7 +66,7 @@ def process_exercise(user, case_type, case_id, score, start, end, times):
     is_pass = score == 100
     rank_change = process_method(user, case, score, start, end)
     
-    type_info['hide_score'] += rank_change * HIDE_NUM    # 隐藏分系数
+    type_info['hide_score'] += rank_change * HIDE_NUM * (case['difficulty'] + EXTEND_NUM) * 0.5    # 隐藏分系数
     if type_info['hide_score'] < 0:
         type_info['hide_score'] = 0
     if type_info['hide_score'] > 30:

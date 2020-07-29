@@ -44,8 +44,7 @@ def addAccount(name):
 
 
 def register():
-    # name = input("输入一个新名字: ")
-    name = input()
+    name = input("输入一个新名字: ")
     while name in DATA_USERS.keys() or name == '':
         if name == '':
             name = input("名字不能为空，请重新输入：")
@@ -113,22 +112,28 @@ def getOffset(type):
 
 
 def test():
-    # print("测试题目难度会根据你的分数确定，并会采取计时来综合评估你的成绩，请注意做题时间")
-    # input("已准备好按Enter键即可开始")
-    input()
+    print("测试题目难度会根据你的分数确定，并会采取计时来综合评估你的成绩，请注意做题时间")
+    input("已准备好按Enter键即可开始")
     type_info = DATA_USERS[USER_NAME]['type_info']
     sorted_types = list(
         map(lambda x: CASE_TYPES.index(x), sorted(type_info.keys(), key=lambda x: type_info[x]['rank'])))
-    random_type = int(random.random() * (len(CASE_TYPES) * 1.5)) % len(CASE_TYPES)  # 增加薄弱题被选到的概率
-    cases = getRecommendCase(sorted_types[random_type], getOffset(random_type))
+    cases = []
+    while len(cases) <= 0:
+        random_type = int(random.random() * (len(CASE_TYPES) * 1.5)) % len(CASE_TYPES)  # 增加薄弱题被选到的概率
+        cases = getRecommendCase(sorted_types[random_type], getOffset(random_type))
     if len(cases) > 0:
-        # print("测试题目：")
-        # print("     种类：" + cases[0]['case_type'])
-        # print("     下载地址：" + cases[0]['case_zip'])
-        # print("     题目难度：{}".format(cases[0]['rank_score']))
-        # print('---------------------------------------------------------------------------------------------')
-        #
-        # print('请输入每题得分，开始时间，结束时间，修改次数')
+        print("测试题目：")
+        print("     种类：" + cases[0]['case_type'])
+        print("     下载地址：" + cases[0]['case_zip'])
+        print("     题目难度：{}".format(cases[0]['rank_score']))
+        print('---------------------------------------------------------------------------------------------')
+
+        print('请输入每题得分，开始时间，结束时间，修改次数')
+
+        # 测试用
+        testDrive.testSingle(cases[0])
+        sys.stdin = open('rankTest', 'r')
+
         for i in range(1):
             ls = list(map(lambda x: int(x), input().split()))
             score = ls[0]
@@ -136,10 +141,10 @@ def test():
             end_time = ls[2]
             times = ls[3]
             elo.process_rank(DATA_USERS[USER_NAME], cases[i]['case_type'], cases[i]['case_id'], score, start_time,
-                             end_time, times)
+                               end_time, times)
     else:
-        pass
-    # print("已经没有可做的题了！")
+        print("已经没有可做的题了！")
+        testDrive.writeLine('\n')
 
 
 def exercise():
@@ -174,7 +179,7 @@ def exercise():
             end_time = ls[2]
             times = ls[3]
             elo.process_exercise(DATA_USERS[USER_NAME], cases[i]['case_type'], cases[i]['case_id'], score, start_time,
-                                 end_time, times)
+                               end_time, times)
     else:
         print("已经没有可做的题了！")
 
@@ -182,17 +187,15 @@ def exercise():
 def getEvaluate():
     print(" 用户名：" + USER_NAME)
     print(" 编程分数：" + str(DATA_USERS[USER_NAME]['rank_score']))
-    # stdEva.getAbilityFigure(DATA_USERS[USER_NAME]['type_info'])
+    stdEva.getAbilityFigure(DATA_USERS[USER_NAME]['type_info'])
 
 
 def start():
-    # print("成功进入系统!")
-    # print("进行测试可以提高用户的编程评估分，从而有可能被推送到难度更高的题目，进行练习则不影响评估分。你也可以选择查看你的能力评估")
-    # flag = input("请输入你的指令（回复‘E’表示练习，‘T’表示测试，‘D’表示查看能力评估，‘Q’表示退出）：")
-    flag = input()
+    print("成功进入系统!")
+    print("进行测试可以提高用户的编程评估分，从而有可能被推送到难度更高的题目，进行练习则不影响评估分。你也可以选择查看你的能力评估")
+    flag = input("请输入你的指令（回复‘E’表示练习，‘T’表示测试，‘D’表示查看能力评估，‘Q’表示退出）：")
     while flag != 'T' and flag != 'E' and flag != 'D' and flag != 'Q':
-        # flag = input("请输入‘T’或者‘E’或者‘D’或者‘Q’")
-        flag = input()
+        flag = input("请输入‘T’或者‘E’或者‘D’或者‘Q’")
     while flag != 'Q':
         if flag == 'T':
             test()
@@ -200,30 +203,29 @@ def start():
             exercise()
         elif flag == 'D':
             getEvaluate()
-        # flag = input("请输入你的指令（回复‘E’表示练习，‘T’表示测试，‘D’表示查看能力评估，‘Q’表示退出）：")
-        flag = input()
+        flag = input("请输入你的指令（回复‘E’表示练习，‘T’表示测试，‘D’表示查看能力评估，‘Q’表示退出）：")
+
+
 
 
 if __name__ == '__main__':
-    DATA_CASES = getCaseData()
-    test_data = []
-    for i in range(1, 9):
-    #     test_data.append([])
-    #     for j in range(10):
-        test_data = []
-        testDrive.testRank(i * 100)
-        DATA_USERS = {}
-        updateUserData()
-        sys.stdin = open('rankTest', 'r')
-        USER_NAME = login()
-        start()
-        test_data.append(DATA_USERS[USER_NAME]['rank_score'])
-        test_data.append(DATA_USERS[USER_NAME]['type_info'])
-        print()
-        print(test_data[0])
-        # for i in test_data[1].keys():
-        #     print(i)
-        #     print(test_data[1][i])
-    #        DATA_USERS = {}
-    #        updateUserData()
+	# DATA_CASES = getCaseData()
+	# test_data = []
+	# for i in range(1,9):
+	# 	test_data.append([])
+	# 	for j in range(10):
+	# 		testDrive.testRank(i*100)
+	# 		DATA_USERS = {}
+	# 		sys.stdin = open('rankTest', 'r')
+	# 		USER_NAME = login()
+	# 		start()
+	# 		test_data[i-1].append(DATA_USERS[USER_NAME]['rank_score'])
+	# 		DATA_USERS = {}
+	# 		updateUserData()
+	# print(test_data)
 
+    DATA_CASES = getCaseData()
+    DATA_USERS = getUserData()
+    USER_NAME = login()
+    for i in range(700):
+        test()
