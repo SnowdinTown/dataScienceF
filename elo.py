@@ -5,7 +5,8 @@ import Core
 USER_FILE = 'user.json'
 CASE_FILE = 'total_cases.json'
 CASE_TYPES = ['字符串', '线性表', '数组', '查找算法', '排序算法', '数字操作', '树结构', '图结构']
-WEIGHT = [1.1, 1.0, 0.9, 0.8, 0.7, 0.6]
+WEIGHT = [1.0, 0.9, 0.8, 0.7, 0.6, 0.5]
+WEIGHT2 = [1.0, 0.6, 0]
 EXTEND_NUM = 0.1
 HIDE_NUM = 0.1   # 隐藏分系数
 
@@ -39,7 +40,7 @@ def process_rank(user, case_type, case_id, score, start, end, times):
     case = list(filter(lambda x: x['case_id'] == case_id, cases[case_type]))[0]
     type_info = user['type_info'][case_type]
     
-    is_pass = computeS(score, start, end) > 0.8
+    is_pass = computeS(score, start, end) >= 0.8
     rank_change = process_method(user, case, score, start, end)
     if is_pass:
         rank_change += type_info['hide_score']
@@ -90,8 +91,14 @@ def getrankChange(user_rank, case_rank, S, K):
 
 def computeS(score, start, end):
     time = end - start
-    idx = int(time / (1000 * 60 * 60))
-    return score / 100 * WEIGHT[idx]
+    idx1 = int(time / (1000 * 60 * 60))
+    if score == 100:
+        idx2 = 0
+    elif score >= 60:
+        idx2 = 1
+    else:
+        idx2 = 2
+    return WEIGHT2[idx2] * WEIGHT[idx1]
 
 
 def computeK(value):
