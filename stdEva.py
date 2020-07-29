@@ -52,9 +52,22 @@ def getAbilityFigure(userEva):
 	# 增加网格纸
 	ax.grid(True)
 	plt.show()
+
+
+def testUserRankFigure(user):
+	records = user['records']
+	score = 100
+	scores = [100]
+	for i in range(600):
+		score += records[i]['rank_change']
+		scores.append(score)
 	
+	y = scores
+	x = range(601)
+	plt.plot(x,y)
+	plt.show()
 	
 if __name__ == '__main__':
 	f = open('user.json', encoding='utf-8')
-	data =  json.loads(f.read())['snow']['type_evaluates']
-	getAbilityFigure(data)
+	data =  json.loads(f.read())['summer']
+	testUserRankFigure(data)
