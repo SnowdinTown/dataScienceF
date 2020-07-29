@@ -3,6 +3,7 @@ import random
 import sys
 import elo
 import stdEva
+import testDrive
 
 # 预设值
 USER_FILE = 'user.json'
@@ -43,7 +44,8 @@ def addAccount(name):
 
 
 def register():
-    name = input("输入一个新名字: ")
+    # name = input("输入一个新名字: ")
+    name = input()
     while name in DATA_USERS.keys() or name == '':
         if name == '':
             name = input("名字不能为空，请重新输入：")
@@ -136,7 +138,8 @@ def test():
             elo.process_rank(DATA_USERS[USER_NAME], cases[i]['case_type'], cases[i]['case_id'], score, start_time,
                                end_time, times)
     else:
-        print("已经没有可做的题了！")
+	    pass
+        # print("已经没有可做的题了！")
 
 
 def exercise():
@@ -179,7 +182,7 @@ def exercise():
 def getEvaluate():
     print(" 用户名：" + USER_NAME)
     print(" 编程分数：" + str(DATA_USERS[USER_NAME]['rank_score']))
-    stdEva.getAbilityFigure(DATA_USERS[USER_NAME]['type_info'])
+    # stdEva.getAbilityFigure(DATA_USERS[USER_NAME]['type_info'])
 
 
 def start():
@@ -188,7 +191,8 @@ def start():
     # flag = input("请输入你的指令（回复‘E’表示练习，‘T’表示测试，‘D’表示查看能力评估，‘Q’表示退出）：")
     flag = input()
     while flag != 'T' and flag != 'E' and flag != 'D' and flag != 'Q':
-        flag = input("请输入‘T’或者‘E’或者‘D’或者‘Q’")
+        # flag = input("请输入‘T’或者‘E’或者‘D’或者‘Q’")
+        flag = input()
     while flag != 'Q':
         if flag == 'T':
             test()
@@ -196,14 +200,24 @@ def start():
             exercise()
         elif flag == 'D':
             getEvaluate()
-        flag = input("请输入你的指令（回复‘E’表示练习，‘T’表示测试，‘D’表示查看能力评估，‘Q’表示退出）：")
+        # flag = input("请输入你的指令（回复‘E’表示练习，‘T’表示测试，‘D’表示查看能力评估，‘Q’表示退出）：")
+        flag = input()
 
 
 
 
 if __name__ == '__main__':
-    DATA_USERS = getUserData()
-    DATA_CASES = getCaseData()
-    sys.stdin = open('rankTest', 'r')
-    USER_NAME = login()
-    start()
+	DATA_CASES = getCaseData()
+	test_data = []
+	for i in range(1,9):
+		test_data.append([])
+		for j in range(10):
+			testDrive.testRank(i*100)
+			DATA_USERS = {}
+			sys.stdin = open('rankTest', 'r')
+			USER_NAME = login()
+			start()
+			test_data[i-1].append(DATA_USERS[USER_NAME]['rank_score'])
+			DATA_USERS = {}
+			updateUserData()
+	print(test_data)
